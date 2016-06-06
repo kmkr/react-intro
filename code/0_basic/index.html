@@ -1,0 +1,47 @@
+<!doctype html>
+<meta charset="utf-8">
+
+
+<head>
+	<script src="../libs/react/react.js"></script>
+	<script src="../libs/react/react-dom.js"></script>
+</head>
+
+<body>
+
+<div id="my-app"></div>
+
+<script type="text/javascript">
+	var Header = React.createClass({
+		displayName: "Header",
+		render: function () {
+			return React.createElement("div", null, "Hei " + this.props.name);
+		}
+	});
+
+	var EmployeeList = React.createClass({
+		displayName: "EmployeeList",
+		render: function () {
+			var employeeList = [
+				{
+					id: 1,
+					name: "Terje"
+				},
+				{
+					id: 100,
+					name: "Kris-Mikael"
+				}
+			];
+			return React.createElement("ul", null, employeeList.map(function(employee) {
+				return React.createElement("li", {key: employee.id}, employee.name)
+			}));
+		}
+	})
+
+	ReactDOM.render(React.createElement("div", null, [
+		React.createElement(Header, {name: "Brumm", key: "header"}),
+		React.createElement(EmployeeList, {key: "employee-list"})
+	]), document.getElementById("my-app"));
+</script>
+
+</body>

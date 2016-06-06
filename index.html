@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Introduksjon til React</title>
+
+		<meta name="author" content="Kris-Mikael Krister">
+
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/black.css" id="theme">
+
+		<!-- Code syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section>
+					<img src="imgs/react.svg" style="border: 0; background-color: transparent;"/>
+					<p>
+						<small><a href="mailto:kris-mikael.krister@webstep.no">kris-mikael.krister@webstep.no</a></small>
+					</p>
+					<aside class="notes">
+					</aside>
+				</section>
+
+				<section>
+					<aside class="notes">
+						<ul>
+							<li>JavaScript fatigue</li>
+							<li>Hva er React på 5min</li>
+							<li>Vise økosystemet rundt react og at man ikke trenger å sette seg inn i alt</li>
+							<li>React.createElement</li>
+							<li>Props</li>
+							<li>State</li>
+							<li>JSX</li>
+						</ul>
+					</aside>
+				</section>
+
+				<section>
+					<h1>JavaScript fatigue</h1>
+
+					<img src="imgs/fatigue.jpg"/>
+				</section>
+
+				<section>
+					<h1></h1>
+
+					<div>
+					<img src="imgs/6153273.png"/>
+					</div>
+				</section>
+
+				<section>
+					<div>
+					<img src="imgs/react-webpack.png"/>
+					</div>
+
+					<img src="imgs/relaxing.jpg"/>
+				</section>
+
+				<section>
+					<h1>React overordnet</h1>
+					<ul>
+						<li>Kun view</li>
+						<li>Virtuell DOM</li>
+						<li>Dataflyt én vei</li>
+					</ul>
+
+					<aside class="notes">
+					<ul>
+						<li>synker DOM med dine data</li>
+						<li>O(n) kjøretid for oppdateringer</li>
+					</aside>
+				</section>
+
+				<section>
+					<h1>Reconciliation</h1>
+
+					<img src="imgs/should-component-update.png" />
+				</section>
+
+				<section>
+					<h1>Økosystem</h1>
+					<ul>
+						<li class="fragment visible highlight-green">React</li>
+						<li class="fragment visible highlight-green">ECMAScript 6</li>
+						<li class="fragment visible highlight-green">JSX</li>
+						<li class="fragment visible highlight-green">Babel</li>
+						<li style="text-decoration: line-through;" class="fragment visible">Flux / Redux</li>
+						<li style="text-decoration: line-through;" class="fragment visible">Node</li>
+						<li style="text-decoration: line-through;" class="fragment visible">Webpack</li>
+						<li style="text-decoration: line-through;" class="fragment visible">Hot reload</li>
+						<li style="text-decoration: line-through;" class="fragment visible">Server side render</li>
+					</ul>
+				</section>
+
+				<section>
+					<h1>Konsepter</h1>
+
+					<ul>
+						<li><code>React.createClass()</code></li>
+						<li><code>React.createElement()</code></li>
+						<li>Props</li>
+						<li>State</li>
+					</ul>
+				</section>
+
+				<section>
+					<h1>React med ES5</h1>
+
+					<img src="imgs/employee-app.svg" />
+
+					<aside class="notes">
+						digraph G {
+						App -> Header;
+						App -> EmployeeList;
+						App -> AddEmployeeForm;
+					}
+				</aside>
+				</section>
+
+				<section>
+					<h1>React med JSX og ES6</h1>
+					<ul>
+						<li>JSX</li>
+						<li>ES6</li>
+						<li>Babel</li>
+					</ul>
+				</section>
+
+				<section>
+					<h1>Lifecycle-metoder</h1>
+					<ul>
+						<li><code>componentWillMount()</code></li>
+						<li><code>componentDidMount()</code></li>
+						<li><code>componentWillReceiveProps(...)</code></li>
+						<li class="fragment visible highlight-green"><code>shouldComponentUpdate(...)</code></li>
+						<li><code>componentWillUpdate(...)</code></li>
+						<li><code>componentDidUpdate(...)</code></li>
+						<li><code>componentWillUnmount()</code></li>
+					</ul>
+				</section>
+			</div>
+
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+
+			// Full list of configuration options available at:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+				// Optional reveal.js plugins
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					{ src: 'plugin/notes/notes.js', async: true }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
