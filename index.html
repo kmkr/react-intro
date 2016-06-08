@@ -49,20 +49,6 @@
 				</section>
 
 				<section>
-					<aside class="notes">
-						<ul>
-							<li>JavaScript fatigue</li>
-							<li>Hva er React på 5min</li>
-							<li>Vise økosystemet rundt react og at man ikke trenger å sette seg inn i alt</li>
-							<li>React.createElement</li>
-							<li>Props</li>
-							<li>State</li>
-							<li>JSX</li>
-						</ul>
-					</aside>
-				</section>
-
-				<section>
 					<h1>JavaScript fatigue</h1>
 
 					<img src="imgs/fatigue.jpg"/>
@@ -77,15 +63,15 @@
 				</section>
 
 				<section>
-					<div>
+					<div style="margin-top: -30px">
 					<img src="imgs/react-webpack.png"/>
 					</div>
 
-					<img src="imgs/relaxing.jpg"/>
+					<img src="imgs/relaxing.jpg" style="width: 50%"/>
 				</section>
 
 				<section>
-					<h1>React overordnet</h1>
+					<h1>Overordnet</h1>
 					<ul>
 						<li>Kun view</li>
 						<li>Virtuell DOM</li>
@@ -93,9 +79,9 @@
 					</ul>
 
 					<aside class="notes">
-					<ul>
-						<li>synker DOM med dine data</li>
-						<li>O(n) kjøretid for oppdateringer</li>
+						<ul>
+							<li>Synker DOM med dine data</li>
+						</ul>
 					</aside>
 				</section>
 
@@ -103,20 +89,26 @@
 					<h1>Reconciliation</h1>
 
 					<img src="imgs/should-component-update.png" />
+
+					<aside class="notes">
+						<ul>
+							<li>O(n) kjøretid for oppdateringer</li>
+						</ul>
+					</aside>
 				</section>
 
 				<section>
 					<h1>Økosystem</h1>
 					<ul>
-						<li class="fragment visible highlight-green">React</li>
-						<li class="fragment visible highlight-green">ECMAScript 6</li>
-						<li class="fragment visible highlight-green">JSX</li>
-						<li class="fragment visible highlight-green">Babel</li>
-						<li style="text-decoration: line-through;" class="fragment visible">Flux / Redux</li>
-						<li style="text-decoration: line-through;" class="fragment visible">Node</li>
-						<li style="text-decoration: line-through;" class="fragment visible">Webpack</li>
-						<li style="text-decoration: line-through;" class="fragment visible">Hot reload</li>
-						<li style="text-decoration: line-through;" class="fragment visible">Server side render</li>
+						<li class="fragment highlight-green">React</li>
+						<li class="fragment highlight-green">ECMAScript 6</li>
+						<li class="fragment highlight-green">JSX</li>
+						<li class="fragment highlight-green">Babel</li>
+						<li class="fragment highlight-red">Flux / Redux</li>
+						<li class="fragment highlight-red">Node</li>
+						<li class="fragment highlight-red">Webpack</li>
+						<li class="fragment highlight-red">Hot reload</li>
+						<li class="fragment highlight-red">Server side render</li>
 					</ul>
 				</section>
 
@@ -132,26 +124,15 @@
 				</section>
 
 				<section>
-					<h1>React med ES5</h1>
-
-					<img src="imgs/employee-app.svg" />
+					<img style="width: 100%" src="imgs/employee-app.svg" />
 
 					<aside class="notes">
-						digraph G {
+					digraph G {
 						App -> Header;
 						App -> EmployeeList;
 						App -> AddEmployeeForm;
 					}
-				</aside>
-				</section>
-
-				<section>
-					<h1>React med JSX og ES6</h1>
-					<ul>
-						<li>JSX</li>
-						<li>ES6</li>
-						<li>Babel</li>
-					</ul>
+					</aside>
 				</section>
 
 				<section>
