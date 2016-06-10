@@ -37,10 +37,10 @@
 		}
 	})
 
-	ReactDOM.render(React.createElement("div", null, [
-		React.createElement(Header, {name: "Brumm", key: "header"}),
-		React.createElement(EmployeeList, {key: "employee-list"})
-	]), document.getElementById("my-app"));
+	ReactDOM.render(React.createElement("div", null,
+		React.createElement(Header, {name: "Brumm"}),
+		React.createElement(EmployeeList)
+	), document.getElementById("my-app"));
 </script>
 
 </body>
