@@ -11,36 +11,31 @@
 <div id="my-app"></div>
 
 <script type="text/javascript">
-	var Header = React.createClass({
-		displayName: "Header",
-		render: function () {
-			return React.createElement("div", null, "Hei " + this.props.name);
-		}
-	});
+    var Header = React.createClass({
+        render: function () {
+            return React.createElement("div", null, "Hei " + this.props.name);
+        }
+    });
 
-	var EmployeeList = React.createClass({
-		displayName: "EmployeeList",
-		render: function () {
-			var employeeList = [
-				{
-					id: 1,
-					name: "Terje"
-				},
-				{
-					id: 100,
-					name: "Kris-Mikael"
-				}
-			];
-			return React.createElement("ul", null, employeeList.map(function(employee) {
-				return React.createElement("li", {key: employee.id}, employee.name)
-			}));
-		}
-	})
+    var EmployeeList = React.createClass({
+        render: function () {
+            var employees = [
+                {id: 1, name: "Terje"},
+                {id: 2, name: "Ole"}
+            ];
 
-	ReactDOM.render(React.createElement("div", null, [
-		React.createElement(Header, {name: "Brumm", key: "header"}),
-		React.createElement(EmployeeList, {key: "employee-list"})
-	]), document.getElementById("my-app"));
+            return React.createElement("ul", null, employees.map(function (employee) {
+                return React.createElement("li", {key: employee.id}, employee.name);
+            }));
+        }
+    })
+    ReactDOM.render(
+        React.createElement("div", null,
+            React.createElement(Header, {name: "Kris-Mikael"}),
+            React.createElement(EmployeeList)
+        ),
+        document.getElementById("my-app")
+    );
 </script>
 
 </body>

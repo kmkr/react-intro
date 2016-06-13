@@ -105,7 +105,7 @@
 						<li class="fragment highlight-green">JSX</li>
 						<li class="fragment highlight-green">Babel</li>
 						<li class="fragment highlight-red">Flux / Redux</li>
-						<li class="fragment highlight-red">Node</li>
+						<li class="fragment highlight-red">Node og npm</li>
 						<li class="fragment highlight-red">Webpack</li>
 						<li class="fragment highlight-red">Enzyme</li>
 						<li class="fragment highlight-red">Hot reload</li>
@@ -137,6 +137,35 @@
 				</section>
 
 				<section>
+<p>ES5</p>
+					<pre style="margin-top: -40px">
+						<code class="javascript hljs">
+var Header = React.createClass({
+    render: function () {
+        return React.createElement("div", null,
+            Hei " + this.props.name);
+    }
+});
+					</code>
+				</pre>
+<p>JSX</p>
+				<pre style="margin-top: -40px">
+					<code class="javascript hljs">
+class Header extends React.Component {
+    render() {
+        return (
+            <div>
+                Hei {this.props.name}
+            </div>
+        );
+    }
+}
+					</code>
+				</pre>
+
+				</section>
+
+				<section>
 					<h1>Lifecycle-metoder</h1>
 					<ul>
 						<li><code>componentWillMount()</code></li>
@@ -147,6 +176,13 @@
 						<li><code>componentDidUpdate(...)</code></li>
 						<li><code>componentWillUnmount()</code></li>
 					</ul>
+				</section>
+
+				<section>
+					<h1>?</h1>
+				</section>
+				<section>
+					<h1>:)</h1>
 				</section>
 			</div>
 
