@@ -12,9 +12,9 @@ Det er tilstrekkelig å åpne `code/0_basic/index.html` rett i nettleser. Endrin
 
 Siden Babel bruker XHR til å hente ned JS-filer må denne leveres via en webserver for å fungere. Hvis du har Python installert kan det gjøres enkelt slik:
 
-`cd code/`
-`python -mSimpleHTTPServer` (Python 2)
-`python -m http.server` (Python 3)
+* `cd code/`
+* `python -mSimpleHTTPServer` (Python 2)
+* `python -m http.server` (Python 3)
 
 Åpne http://localhost:8000 og naviger inn i mappa `1_babel`.
 
